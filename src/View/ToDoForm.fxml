@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="466.0" prefWidth="694.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ToDoFormController">
+   <children>
+      <Label fx:id="lblWelcomeNote" layoutX="326.0" layoutY="7.0" text="Hi User Welcome to To Do List">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUpdateToDo" layoutX="336.0" layoutY="44.0" prefHeight="25.0" prefWidth="341.0" />
+      <Button fx:id="btnDelete" layoutX="486.0" layoutY="78.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="25.0" prefWidth="84.0" style="-fx-background-color: red;" text="Delete" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnUpdate" layoutX="592.0" layoutY="78.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="25.0" prefWidth="84.0" style="-fx-background-color: green;" text="Update" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="336.0" layoutY="178.0" mnemonicParsing="false" onAction="#btnAddNewToDoOnAction" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: blue;" text="+ Add New ToDo" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Pane fx:id="pane" layoutX="331.0" layoutY="224.0" prefHeight="118.0" prefWidth="353.0" style="-fx-border-color: black;">
+         <children>
+            <TextField fx:id="txtName" layoutX="15.0" layoutY="31.0" prefHeight="25.0" prefWidth="324.0" />
+            <Label fx:id="lblTaskName" layoutX="15.0" layoutY="14.0" text="Task Name">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnAddToList" layoutX="247.0" layoutY="79.0" mnemonicParsing="false" onAction="#btnAddToListOnAction" prefHeight="27.0" prefWidth="91.0" style="-fx-background-color: green;" text="Add To list" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label fx:id="lblCheckText" layoutX="15.0" layoutY="56.0" prefHeight="17.0" prefWidth="166.0" text="Task Name Cann't be Empty" textFill="RED" />
+         </children>
+      </Pane>
+      <Button layoutX="336.0" layoutY="425.0" mnemonicParsing="false" onAction="#btnLogOutOnAction" prefHeight="27.0" prefWidth="113.0" style="-fx-background-color: green;" text="&lt;&lt; Log Out" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fitHeight="90.0" fitWidth="107.0" layoutX="597.0" layoutY="370.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/eagle-logo-design-phoenix-logo-concept-simple-vector-28321232.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblId" layoutX="641.0" layoutY="6.0" prefHeight="19.0" prefWidth="42.0" text="ID">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <ListView fx:id="lstToDoList" layoutX="3.0" layoutY="4.0" prefHeight="458.0" prefWidth="316.0" />
+   </children>
+</AnchorPane>
